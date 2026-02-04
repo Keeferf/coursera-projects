@@ -97,7 +97,6 @@ const Header = () => {
                   key={index}
                   href={social.url}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon icon={social.icon} size="2x" />
                 </a>
