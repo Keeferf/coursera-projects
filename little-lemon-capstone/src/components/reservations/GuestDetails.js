@@ -56,7 +56,10 @@ const GuestDetails = ({ dateTime, onBack, onSubmit }) => {
               value={formData.firstName}
               onChange={handleChange}
               required
+              minLength="2"
+              maxLength="50"
               placeholder="Mark"
+              title="First name must be 2-50 characters"
             />
           </div>
           <div className="form-group">
@@ -68,7 +71,10 @@ const GuestDetails = ({ dateTime, onBack, onSubmit }) => {
               value={formData.lastName}
               onChange={handleChange}
               required
+              minLength="2"
+              maxLength="50"
               placeholder="Zuckerberg"
+              title="Last name must be 2-50 characters"
             />
           </div>
         </div>
@@ -83,7 +89,9 @@ const GuestDetails = ({ dateTime, onBack, onSubmit }) => {
               value={formData.email}
               onChange={handleChange}
               required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               placeholder="mark@example.com"
+              title="Please enter a valid email address"
             />
           </div>
           <div className="form-group">
@@ -95,7 +103,9 @@ const GuestDetails = ({ dateTime, onBack, onSubmit }) => {
               value={formData.phone}
               onChange={handleChange}
               required
+              pattern="\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}"
               placeholder="(123) 456-7890"
+              title="Please enter a 10-digit phone number (e.g., 123-456-7890)"
             />
           </div>
         </div>
@@ -142,6 +152,7 @@ const GuestDetails = ({ dateTime, onBack, onSubmit }) => {
             onChange={handleChange}
             rows="3"
             placeholder="Any dietary restrictions or special seating requests?"
+            maxLength="500"
           />
         </div>
 
