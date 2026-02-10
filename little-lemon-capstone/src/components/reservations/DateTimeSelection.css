@@ -1,3 +1,5 @@
+/* src/components/DateTimeSelection.css */
+
 .datetime-selection {
   display: flex;
   flex-direction: column;
@@ -20,6 +22,7 @@
   margin-top: 0;
 }
 
+/* Calendar Grid - 7 days in a row */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -39,7 +42,7 @@
   cursor: pointer;
   transition: all var(--transition-base);
   min-height: 70px;
-  min-width: 0; /* Allows buttons to shrink */
+  min-width: 0;
 }
 
 .date-button:hover {
@@ -86,6 +89,7 @@
   margin-top: var(--spacing-sm);
 }
 
+/* Time Grid */
 .time-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,6 +116,21 @@
 .time-button.selected {
   background-color: var(--primary-yellow);
   border-color: var(--primary-yellow);
+}
+
+.loading-text,
+.no-times,
+.select-date-prompt {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--primary-green);
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.select-date-prompt {
+  color: var(--highlight-dark);
+  font-style: italic;
 }
 
 .continue-button {
@@ -170,6 +189,7 @@
     font-size: 0.6rem;
   }
 }
+
 @media (max-width: 480px) {
   .selection-section {
     padding: var(--spacing-md);
@@ -186,5 +206,12 @@
 
   .continue-button {
     width: 100%;
+  }
+
+  .select-date-prompt,
+  .loading-text,
+  .no-times-text {
+    padding: var(--spacing-md);
+    font-size: 0.9rem;
   }
 }

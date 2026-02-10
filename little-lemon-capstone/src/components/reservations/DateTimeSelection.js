@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { fetchAPI } from "../../api";
 import "./DateTimeSelection.css";
 
 const DateTimeSelection = ({ onContinue }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [availableTimes, setAvailableTimes] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
+  // Generate next 7 days for the calendar
   const generateDates = () => {
     const dates = [];
     const today = new Date();
-    for (let i = 0; i < 21; i++) {
+    for (let i = 0; i < 7; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
       dates.push(date);
@@ -18,21 +22,15 @@ const DateTimeSelection = ({ onContinue }) => {
 
   const dates = generateDates();
 
-  /* Available time slots for reservation */
-  const timeSlots = [
-    "17:00",
-    "17:30",
-    "18:00",
-    "18:30",
-    "19:00",
-    "19:30",
-    "20:00",
-    "20:30",
-    "21:00",
-    "21:30",
-    "22:00",
-    "22:30",
-  ];
+  useEffect(() => {
+    if (selectedDate) {
+      setIsLoading(true);
+      const times = fetchAPI(selectedDate);
+      setAvailableTimes(times);
+      setSelectedTime(null);
+      setIsLoading(false);
+    }
+  }, [selectedDate]);
 
   const formatDate = (date) => {
     return date.toLocaleDateString("en-US", {
@@ -50,7 +48,7 @@ const DateTimeSelection = ({ onContinue }) => {
 
   return (
     <div className="datetime-selection">
-      {/* Date Section */}
+      {/* Select Date Section */}
       <div className="selection-section">
         <h3>Select Date</h3>
         <div className="calendar-grid">
@@ -77,21 +75,31 @@ const DateTimeSelection = ({ onContinue }) => {
         )}
       </div>
 
-      {/* Time Section */}
+      {/* Select Time Section - Shows API results */}
       <div className="selection-section">
         <h3>Select Time</h3>
-        <div className="time-grid">
-          {timeSlots.map((time) => (
-            <button
-              key={time}
-              className={`time-button ${selectedTime === time ? "selected" : ""}`}
-              onClick={() => setSelectedTime(time)}
-            >
-              {time}
-            </button>
-          ))}
-        </div>
+        {isLoading ? (
+          <p className="loading-text">Loading available times...</p>
+        ) : availableTimes.length > 0 ? (
+          <div className="time-grid">
+            {availableTimes.map((time) => (
+              <button
+                key={time}
+                className={`time-button ${selectedTime === time ? "selected" : ""}`}
+                onClick={() => setSelectedTime(time)}
+              >
+                {time}
+              </button>
+            ))}
+          </div>
+        ) : selectedDate ? (
+          <p className="no-times">No available times for this date.</p>
+        ) : (
+          <p className="select-date-prompt">Please select a date first.</p>
+        )}
       </div>
+
+      {/* Continue Button */}
       <button
         className="continue-button"
         onClick={handleContinue}
