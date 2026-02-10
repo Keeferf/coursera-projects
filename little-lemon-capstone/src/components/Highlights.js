@@ -1,6 +1,9 @@
 // src/components/Highlights.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import bruchetta from "../assets/bruchetta.svg";
+import greeksalad from "../assets/greek salad.jpg";
+import lemondessert from "../assets/lemon dessert.jpg";
 import "./Highlights.css";
 
 const Highlights = () => {
@@ -15,27 +18,27 @@ const Highlights = () => {
   const specials = [
     {
       id: 1,
-      name: "Lorem ipsum",
+      name: "Bruchetta",
       price: "$5.00",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/",
+      image: bruchetta,
     },
     {
       id: 2,
-      name: "Lorem ipsum",
+      name: "Greek Salad",
       price: "$5.00",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/",
+      image: greeksalad,
     },
     {
       id: 3,
-      name: "Lorem ipsum",
+      name: "Lemon Dessert",
       price: "$5.00",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-      image: "/",
+      image: lemondessert,
     },
   ];
 

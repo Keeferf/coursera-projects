@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Logo.svg";
 import "./Navigation.css";
 
 const Navigation = () => {
-  // State to manage mobile menu open/close
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // Toggle function for mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -16,7 +14,7 @@ const Navigation = () => {
       <div className="container nav-container">
         {/* Logo */}
         <Link to="/" className="logo">
-          <img src="/logo.svg" alt="Little Lemon" className="logo-img" />
+          <img src={logo} alt="Little Lemon" className="logo-img" />
         </Link>
 
         {/* Mobile Menu Toggle Button (Hamburger) */}

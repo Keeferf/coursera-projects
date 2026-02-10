@@ -1,5 +1,7 @@
 // src/components/About.js
 import React from "react";
+import maa1 from "../assets/Mario and Adrian A.jpg";
+import maa2 from "../assets/Mario and Adrian b.jpg";
 import "./About.css";
 
 const About = () => {
@@ -22,13 +24,13 @@ const About = () => {
         </div>
         <div className="about-images">
           <img
-            src="/chefs.jpg"
-            alt="Little Lemon chefs in the kitchen"
+            src={maa1}
+            alt="Little Lemon chefs in the kitchen 1"
             className="about-image about-image-front"
           />
           <img
-            src="/restaurant.jpg"
-            alt="Little Lemon restaurant interior"
+            src={maa2}
+            alt="Little Lemon chefs in the kitchen 2"
             className="about-image about-image-back"
           />
         </div>

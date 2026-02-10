@@ -1,6 +1,7 @@
 // src/components/Hero.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import food from "../assets/restauranfood.jpg";
 import "./Hero.css";
 
 const Hero = () => {
@@ -27,7 +28,7 @@ const Hero = () => {
         </div>
         <div className="hero-image-wrapper">
           <img
-            src="/restaurant-food.jpg"
+            src={food}
             alt="Little Lemon restaurant dish"
             className="hero-image"
           />
