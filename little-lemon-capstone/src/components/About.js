@@ -1,5 +1,3 @@
-// src/components/About.js
-import React from "react";
 import maa1 from "../assets/Mario and Adrian A.jpg";
 import maa2 from "../assets/Mario and Adrian b.jpg";
 import "./About.css";

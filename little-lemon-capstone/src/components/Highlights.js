@@ -1,5 +1,4 @@
 // src/components/Highlights.js
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import bruchetta from "../assets/bruchetta.svg";
 import greeksalad from "../assets/greek salad.jpg";

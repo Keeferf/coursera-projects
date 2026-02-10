@@ -1,12 +1,8 @@
-/* src/components/Highlights.css */
-
-/* Highlights Section */
 .highlights {
   padding: var(--spacing-xl) 0;
   background-color: var(--white);
 }
 
-/* Header with title and button */
 .highlights-header {
   display: flex;
   justify-content: space-between;
@@ -22,7 +18,6 @@
   margin: 0;
 }
 
-/* Online Menu Button */
 .online-menu-button {
   background-color: var(--primary-yellow);
   color: var(--highlight-dark);
@@ -43,14 +38,12 @@
   transform: translateY(-2px);
 }
 
-/* Grid for special cards */
 .specials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
 }
 
-/* Individual Special Card */
 .special-card {
   background-color: var(--highlight-light);
   border-radius: 16px;
@@ -59,7 +52,6 @@
   flex-direction: column;
 }
 
-/* Card Image */
 .special-image-wrapper {
   width: 100%;
   height: 200px;
@@ -72,7 +64,6 @@
   object-fit: cover;
 }
 
-/* Card Content */
 .special-content {
   padding: var(--spacing-lg);
   display: flex;
@@ -80,7 +71,6 @@
   flex: 1;
 }
 
-/* Card Header with name and price */
 .special-header {
   display: flex;
   justify-content: space-between;
@@ -103,7 +93,6 @@
   color: var(--secondary-salmon);
 }
 
-/* Description */
 .special-description {
   font-family: var(--font-body);
   font-size: 1rem;
@@ -113,7 +102,6 @@
   flex: 1;
 }
 
-/* Delivery Button - Yellow style */
 .delivery-button {
   background-color: var(--primary-yellow);
   color: var(--highlight-dark);
@@ -135,7 +123,7 @@
   transform: translateY(-2px);
 }
 
-/* Tablet Responsive */
+/* Mobile */
 @media (max-width: 968px) {
   .specials-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -152,7 +140,6 @@
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 480px) {
   .specials-grid {
     grid-template-columns: 1fr;

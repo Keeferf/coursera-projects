@@ -1,5 +1,3 @@
-// src/components/Hero.js
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import food from "../assets/restauranfood.jpg";
 import "./Hero.css";
@@ -13,7 +11,6 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      {/* Inner container matches navbar width */}
       <div className="hero-inner">
         <div className="hero-content">
           <h1 className="hero-title">Little Lemon</h1>

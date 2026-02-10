@@ -1,6 +1,3 @@
-/* src/components/Navigation.css */
-
-/* Navigation Container - full width background */
 .navigation {
   background: var(--white);
   position: sticky;
@@ -9,7 +6,6 @@
   padding: var(--spacing-sm) 0;
 }
 
-/* Inner container - uses the content width variable */
 .nav-container {
   width: var(--content-width);
   max-width: var(--max-content-width);
@@ -20,7 +16,6 @@
   align-items: center;
 }
 
-/* Logo Styles */
 .logo {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -38,7 +33,6 @@
   width: auto;
 }
 
-/* Navigation Links Container */
 .nav-links {
   display: flex;
   list-style: none;
@@ -46,7 +40,6 @@
   align-items: center;
 }
 
-/* Individual Navigation Links */
 .nav-links li a {
   font-weight: 600;
   color: var(--highlight-dark);
@@ -54,7 +47,6 @@
   text-decoration: none;
 }
 
-/* Yellow Underline Effect on Hover */
 .nav-links li a::after {
   content: "";
   position: absolute;
@@ -74,7 +66,6 @@
   color: var(--primary-green);
 }
 
-/* Mobile Menu Toggle Button */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -94,9 +85,8 @@
   transition: all var(--transition-base);
 }
 
-/* Tablet and Mobile Responsive */
+/* Mobile */
 @media (max-width: 968px) {
-  /* Full width on mobile */
   .nav-container {
     width: 100%;
     padding: 0 var(--spacing-sm);

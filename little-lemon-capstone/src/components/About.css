@@ -1,12 +1,8 @@
-/* src/components/About.css */
-
-/* About Section */
 .about {
   padding: var(--spacing-xl) 0;
   background-color: var(--white);
 }
 
-/* Container - uses same width as other sections */
 .about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -14,14 +10,12 @@
   align-items: center;
 }
 
-/* Left Content Area */
 .about-content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
 
-/* Main Title */
 .about-title {
   font-family: var(--font-display);
   font-size: 3.5rem;
@@ -31,7 +25,6 @@
   line-height: 1;
 }
 
-/* Subtitle */
 .about-subtitle {
   font-family: var(--font-display);
   font-size: 2rem;
@@ -41,7 +34,6 @@
   margin-bottom: var(--spacing-sm);
 }
 
-/* Description Text */
 .about-text {
   font-family: var(--font-body);
   font-size: 1.125rem;
@@ -50,7 +42,6 @@
   margin: 0;
 }
 
-/* Right Images Area */
 .about-images {
   position: relative;
   height: 400px;
@@ -59,7 +50,6 @@
   justify-content: center;
 }
 
-/* Images */
 .about-image {
   width: 280px;
   height: 320px;
@@ -68,21 +58,19 @@
   position: absolute;
 }
 
-/* Back Image (top right) */
 .about-image-back {
   top: 0;
   right: 0;
   z-index: 1;
 }
 
-/* Front Image (bottom left, overlapping) */
 .about-image-front {
   bottom: 0;
   left: 0;
   z-index: 2;
 }
 
-/* Tablet Responsive */
+/* Mobile */
 @media (max-width: 968px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -105,7 +93,6 @@
   }
 }
 
-/* Mobile Responsive */
 @media (max-width: 480px) {
   .about-title {
     font-size: 2.5rem;
