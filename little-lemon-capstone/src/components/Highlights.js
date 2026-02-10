@@ -58,6 +58,7 @@ const Highlights = () => {
                 src={special.image}
                 alt={special.name}
                 className="special-image"
+                loading="lazy"
               />
             </div>
             <div className="special-content">

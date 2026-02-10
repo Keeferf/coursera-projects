@@ -27,7 +27,7 @@ const HeroSection = ({
         </div>
         {showImage && imageSrc && (
           <div className="hero-section-image">
-            <img src={imageSrc} alt={imageAlt} />
+            <img src={imageSrc} alt={imageAlt} loading="eager" />
           </div>
         )}
       </div>

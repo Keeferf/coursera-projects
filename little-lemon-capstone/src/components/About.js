@@ -25,11 +25,13 @@ const About = () => {
             src={maa1}
             alt="Little Lemon chefs in the kitchen 1"
             className="about-image about-image-front"
+            loading="lazy"
           />
           <img
             src={maa2}
             alt="Little Lemon chefs in the kitchen 2"
             className="about-image about-image-back"
+            loading="lazy"
           />
         </div>
       </div>
