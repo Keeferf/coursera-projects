@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+:root {
+  /* Content Width - 2/3 of page like Bootstrap */
+  --content-width: 66.666%;
+  --max-content-width: 1200px;
+
+  /* Primary Colors */
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+
+  /* Secondary Colors */
+  --secondary-salmon: #ee9972;
+  --secondary-peach: #fbdabb;
+
+  /* Highlight Colors */
+  --highlight-light: #edefee;
+  --highlight-dark: #333333;
+
+  /* Neutral Colors */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Typography */
+  --font-display: "Markazi Text", serif;
+  --font-body: "Karla", sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: var(--font-body);
 }
 
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-content {
+  flex: 1;
 }

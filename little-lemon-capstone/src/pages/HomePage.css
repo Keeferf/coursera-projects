@@ -1,0 +1,19 @@
+/* src/pages/HomePage.css */
+
+/* Full width sections (like Hero with colored background) */
+
+/* Wrapper for constrained sections */
+.content-wrapper {
+  width: var(--content-width);
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Responsive: full width on mobile */
+@media (max-width: 968px) {
+  .content-wrapper {
+    width: 100%;
+    padding: 0 var(--spacing-sm);
+  }
+}

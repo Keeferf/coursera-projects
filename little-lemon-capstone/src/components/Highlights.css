@@ -1,0 +1,172 @@
+/* src/components/Highlights.css */
+
+/* Highlights Section */
+.highlights {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--white);
+}
+
+/* Header with title and button */
+.highlights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.highlights-header h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--highlight-dark);
+  margin: 0;
+}
+
+/* Online Menu Button */
+.online-menu-button {
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.online-menu-button:hover {
+  background-color: #e6c013;
+  transform: translateY(-2px);
+}
+
+/* Grid for special cards */
+.specials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* Individual Special Card */
+.special-card {
+  background-color: var(--highlight-light);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Image */
+.special-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.special-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card Content */
+.special-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Card Header with name and price */
+.special-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.special-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--highlight-dark);
+  margin: 0;
+}
+
+.special-price {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--secondary-salmon);
+}
+
+/* Description */
+.special-description {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--primary-green);
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+/* Delivery Button */
+.delivery-button {
+  background: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--highlight-dark);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  transition: color var(--transition-base);
+}
+
+.delivery-button:hover {
+  color: var(--primary-green);
+}
+
+/* Add delivery icon via pseudo-element */
+.delivery-button::before {
+  content: "🛵";
+  font-size: 1.25rem;
+}
+
+/* Tablet Responsive */
+@media (max-width: 968px) {
+  .specials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlights-header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .highlights-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .specials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .online-menu-button {
+    width: 100%;
+  }
+}
