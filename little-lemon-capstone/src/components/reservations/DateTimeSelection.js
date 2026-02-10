@@ -6,11 +6,10 @@ const DateTimeSelection = ({ onContinue }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
 
-  // Generate next 7 days for the calendar (fits better in container)
   const generateDates = () => {
     const dates = [];
     const today = new Date();
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 21; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
       dates.push(date);
@@ -31,6 +30,9 @@ const DateTimeSelection = ({ onContinue }) => {
     "20:00",
     "20:30",
     "21:00",
+    "21:30",
+    "22:00",
+    "22:30",
   ];
 
   const formatDate = (date) => {
