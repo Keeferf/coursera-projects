@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
 import DateTimeSelection from "../components/reservations/DateTimeSelection";
-// import GuestDetails from "../components/GuestDetails";
+import GuestDetails from "../components/reservations/GuestDetails";
 // import Confirmation from "../components/Confirmation";
 import "./ReservationsPage.css";
 
@@ -22,7 +22,6 @@ const ReservationsPage = () => {
   const handleGuestDetailsSubmit = (guestData) => {
     const fullReservation = { ...reservationData, ...guestData };
     setReservationData(fullReservation);
-    // Here you would typically send data to backend
     console.log("Reservation submitted:", fullReservation);
     setStep(3);
   };
@@ -43,7 +42,7 @@ const ReservationsPage = () => {
           <DateTimeSelection onContinue={handleDateTimeContinue} />
         )}
 
-        {/* {step === 2 && (
+        {step === 2 && (
           <GuestDetails
             dateTime={reservationData}
             onBack={handleGuestDetailsBack}
@@ -51,7 +50,7 @@ const ReservationsPage = () => {
           />
         )}
 
-        {step === 3 && (
+        {/* {step === 3 && (
           <Confirmation
             reservation={reservationData}
             onNewReservation={handleNewReservation}
