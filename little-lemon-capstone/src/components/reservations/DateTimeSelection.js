@@ -1,3 +1,4 @@
+// src/components/DateTimeSelection.js
 import React, { useState, useEffect } from "react";
 import { fetchAPI } from "../../api";
 import "./DateTimeSelection.css";
@@ -54,6 +55,7 @@ const DateTimeSelection = ({ onContinue }) => {
           {dates.map((date, index) => (
             <button
               key={index}
+              data-testid="date-button"
               className={`date-button ${selectedDate?.toDateString() === date.toDateString() ? "selected" : ""}`}
               onClick={() => setSelectedDate(date)}
             >
@@ -84,6 +86,7 @@ const DateTimeSelection = ({ onContinue }) => {
             {availableTimes.map((time) => (
               <button
                 key={time}
+                data-testid="time-button"
                 className={`time-button ${selectedTime === time ? "selected" : ""}`}
                 onClick={() => setSelectedTime(time)}
               >
@@ -100,6 +103,7 @@ const DateTimeSelection = ({ onContinue }) => {
 
       {/* Continue Button */}
       <button
+        data-testid="continue-button"
         className="continue-button"
         onClick={handleContinue}
         disabled={!selectedDate || !selectedTime}
