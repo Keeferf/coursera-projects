@@ -8,7 +8,6 @@ const DateTimeSelection = ({ onContinue }) => {
   const [availableTimes, setAvailableTimes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  // Generate next 7 days for the calendar
   const generateDates = () => {
     const dates = [];
     const today = new Date();
@@ -75,7 +74,7 @@ const DateTimeSelection = ({ onContinue }) => {
         )}
       </div>
 
-      {/* Select Time Section - Shows API results */}
+      {/* Select Time Section */}
       <div className="selection-section">
         <h3>Select Time</h3>
         {isLoading ? (
