@@ -1,4 +1,3 @@
-// src/components/DateTimeSelection.js
 import React, { useState } from "react";
 import "./DateTimeSelection.css";
 
@@ -19,7 +18,7 @@ const DateTimeSelection = ({ onContinue }) => {
 
   const dates = generateDates();
 
-  // Available time slots
+  /* Available time slots for reservation */
   const timeSlots = [
     "17:00",
     "17:30",
@@ -51,7 +50,7 @@ const DateTimeSelection = ({ onContinue }) => {
 
   return (
     <div className="datetime-selection">
-      {/* Select Date Section */}
+      {/* Date Section */}
       <div className="selection-section">
         <h3>Select Date</h3>
         <div className="calendar-grid">
@@ -78,7 +77,7 @@ const DateTimeSelection = ({ onContinue }) => {
         )}
       </div>
 
-      {/* Select Time Section */}
+      {/* Time Section */}
       <div className="selection-section">
         <h3>Select Time</h3>
         <div className="time-grid">
@@ -93,8 +92,6 @@ const DateTimeSelection = ({ onContinue }) => {
           ))}
         </div>
       </div>
-
-      {/* Continue Button */}
       <button
         className="continue-button"
         onClick={handleContinue}

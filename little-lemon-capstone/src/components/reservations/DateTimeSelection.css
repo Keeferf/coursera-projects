@@ -1,5 +1,3 @@
-/* src/components/DateTimeSelection.css */
-
 .datetime-selection {
   display: flex;
   flex-direction: column;
@@ -22,7 +20,6 @@
   margin-top: 0;
 }
 
-/* Calendar Grid - 7 days in a row */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -89,7 +86,6 @@
   margin-top: var(--spacing-sm);
 }
 
-/* Time Grid */
 .time-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,7 +114,6 @@
   border-color: var(--primary-yellow);
 }
 
-/* Continue Button */
 .continue-button {
   background-color: var(--primary-yellow);
   color: var(--highlight-dark);
@@ -150,7 +145,7 @@
   opacity: 0.7;
 }
 
-/* Tablet Responsive */
+/* Mobile */
 @media (max-width: 968px) {
   .datetime-selection {
     width: 100%;
@@ -175,8 +170,6 @@
     font-size: 0.6rem;
   }
 }
-
-/* Mobile Responsive - 4 columns for dates */
 @media (max-width: 480px) {
   .selection-section {
     padding: var(--spacing-md);

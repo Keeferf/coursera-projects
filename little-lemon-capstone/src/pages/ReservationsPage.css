@@ -1,12 +1,9 @@
-/* src/pages/ReservationsPage.css */
-
 .reservations-page {
   min-height: calc(100vh - 70px);
   background-color: var(--white);
   padding-bottom: var(--spacing-xl);
 }
 
-/* Content Section - Constrained width */
 .reservations-content {
   width: var(--content-width);
   max-width: var(--max-content-width);
@@ -14,7 +11,7 @@
   padding: var(--spacing-xl) var(--spacing-md) 0;
 }
 
-/* Responsive */
+/* Mobile */
 @media (max-width: 968px) {
   .reservations-content {
     width: 100%;

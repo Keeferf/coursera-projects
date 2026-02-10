@@ -1,13 +1,12 @@
-// src/pages/ReservationsPage.js
 import React, { useState } from "react";
 import HeroSection from "../components/HeroSection";
 import DateTimeSelection from "../components/reservations/DateTimeSelection";
 import GuestDetails from "../components/reservations/GuestDetails";
-// import Confirmation from "../components/Confirmation";
+import Confirmation from "../components/reservations/Confirmation";
 import "./ReservationsPage.css";
 
 const ReservationsPage = () => {
-  const [step, setStep] = useState(1); // 1: Date/Time, 2: Guest Details, 3: Confirmation
+  const [step, setStep] = useState(1);
   const [reservationData, setReservationData] = useState({});
 
   const handleDateTimeContinue = (dateTime) => {
@@ -50,12 +49,12 @@ const ReservationsPage = () => {
           />
         )}
 
-        {/* {step === 3 && (
+        {step === 3 && (
           <Confirmation
             reservation={reservationData}
             onNewReservation={handleNewReservation}
           />
-        )} */}
+        )}
       </div>
     </section>
   );
